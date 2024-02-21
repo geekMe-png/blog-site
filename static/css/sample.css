@@ -1,0 +1,197 @@
+.flash{
+    margin-left: -50px;
+    border-bottom: 0.3px solid white;
+    width: 150vw;
+    color: white;
+    padding-left: 10px;
+    background-color: deeppink;
+    height: 40px;
+}
+
+.messages {
+    margin-top: 10px;
+}
+
+.articlemodel {
+    position: relative;
+    padding: 40px;
+    border-bottom: 1px solid black;
+}
+
+header {
+    background-color: black;
+    background-size: 100%, 30%;
+    height: 100px;
+    width: 1282px;
+    margin: -10px;
+}
+
+.header-logo {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: white;
+    float: left;
+    padding-top: 25px;
+    padding-left: 15px;
+}
+
+.header-login {
+    float: right;
+    padding: 39px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.header-login:hover{
+    background-color: gray;
+}
+
+.header-signup  {
+    float: right;
+    padding: 39px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+.header-signup:hover {
+    background-color: gray;
+}
+
+.title {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.article-image {
+    float: left;
+    padding-right: 30px;
+}
+
+.article-time {
+    font-size: 15px;
+}
+
+.article-title {
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.login-form {
+    padding-top: 20px;
+}
+
+.article-opration {
+    float: right;
+}
+
+.create {
+    margin-right: 210px;
+    padding: 5px 15px;
+    background-color: mediumspringgreen;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.create:hover {
+    background-color: mediumturquoise;
+    color: white;
+}
+
+.create-form {
+    margin-top: 10px;
+}
+
+.title-create {
+    padding-top: 20px;
+}
+
+.body-create {
+    padding-top: 20px;
+}
+
+.image-create {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search {
+    margin-top: -20px;
+    margin-bottom: 40px;
+}
+
+.sort-opt {
+    float: right;
+}
+
+.index-sort-opt {
+    float: right;
+    margin-top: -20px;
+}
+
+.update {
+    background-color: gold;
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.update:hover {
+    background-color: goldenrod;
+    color: white;
+}
+
+.delete {
+    background-color: cornflowerblue;
+    text-decoration: none;
+    color: black;
+    margin-right: 5px;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.delete:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.watch {
+    background-color: aqua;
+    text-decoration: none;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.watch:hover {
+    background-color: aquamarine;
+    color: white;
+}
+
+.username {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.password {
+    margin-bottom: 10px;
+    margin-right: 15px;
+    float: left;
+}
+
+.watch-title {
+    margin-top: 50px;
+}
+
+.carrent-image-image {
+    margin-top: -15px;
+    padding: 10px;
+    border: 2px solid gray;
+}

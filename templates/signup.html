@@ -1,0 +1,22 @@
+{%extends "base.html" %}
+{% block content %}
+<body>
+<header>
+    <div class="header-logo">アカウント作成</div>
+</header>
+
+<form method="POST">
+    <div class="login-form">
+        <div class="username">
+            <label for="" class="form-label">ユーザー名</label>
+            <input type="text" name="username" class="Nonetype">
+        </div>
+
+        <div class="password">
+            <label for="" class="form-label">パスワード</label>
+            <input type="password" name="password" class="Nonetype">
+        </div>
+    </div>
+    <input type="submit" value="新規登録">
+</form>
+    {% endblock %}

@@ -1,0 +1,43 @@
+{%extends "base.html" %}
+{% block content %}
+<header>
+    <div class="header-logo">編集画面</div>
+
+    <a href="/logout" role="button" class="header-login">ログアウト</a>
+
+    <a href="/index/opt" role="button" class="header-signup">ホームへ</a>
+</header>
+
+<div class="create-form">
+    <form action="" method="POST" enctype="multipart/form-data">
+        <div class="title-create">
+            <label for="title">タイトル</label>
+        </div>
+
+        <div class="title-create-text">
+            <input type="text" name="title" value={{ post.title }}>
+        </div>
+
+        <div class="body-create">
+            <label for="body">内容</label>
+        </div>
+
+        <div class="body-create-textarea">
+            <textarea name="body" id="" cols="30" rows="10" placeholder="ここに記入してください">{{ post.body }}</textarea>
+        </div>
+
+        <div class="carrent-image"> 
+            <p class="carrent-image-title">現在の画像</p>
+            <img src="../static/images/{{post.image}}" alt="" width="250px" height="180px" class="carrent-image-image">
+        </div>
+        
+        <div class="image-create">
+            <label>
+                <input type="file" name="image" accept="image/*">※画像ファイルのみ（jpg, jpeg, png）
+            </label>
+        </div>
+
+        <div class="submit"><input type="submit" value="更新する"></div>
+    </form>
+</div>
+{% endblock %}

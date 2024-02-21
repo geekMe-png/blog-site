@@ -1,0 +1,60 @@
+{%extends "base.html" %}
+{% block title %}TOPページ{% endblock %}
+
+{% block content %}
+<header>
+    <div class="header-logo">ブログアプリケーション</div>
+
+    <a href="/logout" role="button" class="header-login">ログアウト</a>
+</header>
+
+<div class="title">
+    <div class="title-logo"><h2>記事一覧</h2></div>
+    
+    <div class="search">
+        <input type="search" name="search_opt" placeholder="キーワードを入力" autocomplete="on" form="f" autofocus value={{search_opt}}>
+        <input type="submit" form="f" value="検索">
+    </div>
+
+    <form method="POST" action="/index/opt" id="f">
+        <div class="sort-opt">
+            <select name="sort_opt" size="1">
+                <option name="sort_opt" value="sort_new">作成日時が新しい順</option>
+                <option name="sort_opt" value="sort_old">作成日時が古い順</option>
+                <option name="sort_opt" value="sort_title">タイトル順</option>
+            </select>
+            <input type="submit" value="更新">
+        </div>
+    </form>
+
+    <a href="/create" class="create">＋記事を書く</a>
+</div>
+
+    {% for post in posts_opt %}
+    <div class="articlemodel">
+        <article>
+            <div class="article-image">
+                <img src="../static/images/{{post.image}}" alt="サンプル画像" width="220px" height="150px">
+            </div>
+
+            <div class="article-time">
+                <p>作成日時: {{ post.created_at }}</p>
+            </div>
+
+            <div class="article-title">
+                <h2>{{ post.title }}</h2>
+            </div>
+
+            <div class="article-body">
+                <p>{{ post.body }}</p>
+            </div>
+        </article>
+
+        <div class="article-opration">
+            <a href="/{{post.id}}/update" role="button" class="update">編集</a>
+            <a href="/{{post.id}}/delete" role="button" class="delete">削除</a>
+            <a href="/{{post.id}}/article" role="button" class="watch">記事を見る</a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

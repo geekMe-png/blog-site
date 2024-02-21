@@ -1,0 +1,50 @@
+{%extends "base.html" %}
+{% block content %}
+<header>
+    <div class="header-logo">新規登録</div>
+    <a href="/logout" role="button" class="header-login">ログアウト</a>
+    <a href="/index/opt" role="button" class="header-signup">ホームへ</a>
+</header>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class='flash'>
+    <ul class=flashes>
+    {% for category, message in messages %}
+    <ul class="{{ category }}", class="messages">{{ message }}</ul>
+    {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endwith %}
+
+<div class="create-form">
+    <form action="" method="POST" enctype="multipart/form-data">
+        <div class="title-create">
+            <label for="title">タイトル</label>
+        </div>
+
+        <div class="title-create-text">
+            <input type="text" name="title">
+        </div>
+
+        <div class="body-create">
+            <label for="body">内容</label>
+        </div>
+
+        <div class="body-create-textarea">
+            <textarea name="body" id="" cols="30" rows="10" placeholder="ここに記入してください"></textarea>
+        </div>
+
+        <div class="image-create">
+            <label>
+                <input type="file" name="image" accept="image/*">※画像ファイルのみ（jpg, jpeg, png）
+            </label>
+        </div>
+
+        <div class="submit">
+            <input type="submit" value="新規登録">
+        </div>
+    </form>
+</div>
+    {% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+    <div class="header-logo">ログイン</div>
+</header>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class='flash'>
+    <ul class=flashes>
+    {% for category, message in messages %}
+    <ul class="{{ category }}", class="messages">{{ message }}</ul>
+    {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endwith %}
+
+<form method="POST">
+    <div class="login-form">
+        <div class="username">
+            <label for="" class="form-label">ユーザー名</label>
+            <input type="text" name="username" class="Nonetype">
+        </div>
+
+        <div class="password">
+            <label for="" class="form-label">パスワード</label>
+            <input type="password" name="password" class="Nonetype">
+        </div>
+    </div>
+    <input type="submit" value="ログイン">
+</form>
+{% endblock %}
