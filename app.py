@@ -29,7 +29,7 @@ class Post(db.Model):
     title = db.Column(db.String(50), nullable=False)
     body = db.Column(db.String(300), nullable=False)
     created_at = db.Column(db.DateTime, nullable=False)
-    image = db.Column(db.String, nullable=False)
+    #image = db.Column(db.String, nullable=False)
 
 
 class User(UserMixin, db.Model):
@@ -172,17 +172,17 @@ def create():
     if request.method == 'POST':
         title = request.form.get('title')
         body = request.form.get('body')
-        file = request.files.get('image')
-        filename = file.filename
+        #file = request.files.get('image')
+        #filename = file.filename
         create_at = datetime.now(pytz.timezone('Asia/Tokyo'))
 
-        if title == '' or body == '' or filename == '':
+        if title == '' or body == '': #or filename == '':
             flash('記入漏れがあります')
             return redirect('/create')
         else:
             post = Post(title=title, body=body,
-                        created_at=create_at, image=filename)
-            file.save(os.path.join('./static/images', filename))
+                        created_at=create_at)#, image=filename)
+            #file.save(os.path.join('./static/images', filename))
             db.session.add(post)
             db.session.commit()
             return redirect('/index/opt')
@@ -198,9 +198,9 @@ def update(id):
     else:
         post.title = request.form.get('title')
         post.body = request.form.get('body')
-        file = request.files.get('image')
-        post.image = file.filename
-        file.save(os.path.join('./static/images', post.image))
+        #file = request.files.get('image')
+        #post.image = file.filename
+        #file.save(os.path.join('./static/images', post.image))
 
         db.session.commit()
         return redirect('/index/opt')
