@@ -12,7 +12,7 @@ import pytz
 import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ornunwgxitrzhb:d8aa5ca84b7bf40d81143913c6a92ca78f961115e2bf055f20b5f89b7fd44375@ec2-34-236-199-229.compute-1.amazonaws.com:5432/d2b5vlfsori96b'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://yrcdfhxxqdfqmp:8d1cd2852da82840d2345c9d4df760807d068b787b7579a12d623ac7c7bef6a5@ec2-52-0-187-246.compute-1.amazonaws.com:5432/d9ttoecsen37e9'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.urandom(24)
 app.secret_key = os.urandom(24)
